@@ -1,0 +1,33 @@
+<p>login works!</p>
+<form [formGroup]="loginform" (ngSubmit)="login()">
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="uname" formControlName="uname">
+      <div *ngIf="loginform.controls?.uname?.invalid">
+            
+        <span class="hass-error-message" *ngIf="loginform.controls?.uname?.errors?.pattern">
+          <p class="validation">*Please enter valid Firstname.</p>
+        </span>
+      </div>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" formControlName="psw">
+      <div *ngIf="loginform.controls?.psw?.invalid">
+                      
+        <span class="hass-error-message" *ngIf="loginform.controls?.psw?.errors?.minlength">
+          <p class="validation">*Minimum 5 character.</p>
+        </span>
+        <span class="hass-error-message" *ngIf="loginform.controls?.psw?.errors?.maxlength">
+          <p class="validation">*Maximum 10 character.</p>
+        </span>
+        
+      </div>
+  
+      <button type="submit">Login</button>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
