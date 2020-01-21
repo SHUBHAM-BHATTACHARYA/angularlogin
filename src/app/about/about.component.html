@@ -1,2 +1,2 @@
 <p>about works!</p>
-<button (click)="logout()" class="btn btn-danger">Logout</button>
+<button *ngIf="this.id" class="btn btn-success" (click)="logout()">Logout</button>

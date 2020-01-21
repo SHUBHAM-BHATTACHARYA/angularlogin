@@ -10,6 +10,8 @@ import { HOMEComponent } from './home/home.component';
 import { ABOUTComponent } from './about/about.component';
 import { CONTACTComponent } from './contact/contact.component';
 import { NAVBARComponent } from './navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { NAVBARComponent } from './navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

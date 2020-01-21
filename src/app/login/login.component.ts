@@ -43,7 +43,15 @@ export class LOGINComponent implements OnInit {
         console.log('Method Running...................',sendData);
         console.log("My Data Prepared......");
          let data=this.userService.login(sendData);
-         this.router.navigate(['HOME']);
+         if(data==true)
+         {
+           this.userService.alertForSuccess("Login Successfully","Sucess");
+         }
+         else
+         {
+          this.userService.alertForWarning("Invalid Credential Warning","warning");
+         }
+         this.router.navigate(['ABOUT']);
       }
     }
 }

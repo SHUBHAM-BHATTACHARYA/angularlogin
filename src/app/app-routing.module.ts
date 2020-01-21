@@ -9,9 +9,9 @@ import { CONTACTComponent } from './contact/contact.component';
 import { NAVBARComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
-  {path:"", redirectTo:"login",pathMatch:"full"},
+  {path:"", redirectTo:"LOGIN", pathMatch:"full"},
+  {path:"LOGIN", component:LOGINComponent},
   {path:"day3",component:Day3Component},
-  {path:"LOGIN",component:LOGINComponent},
   {path:"REGISTER",component:REGISTERComponent},
   {path:"HOME",component:HOMEComponent},
   {path:"ABOUT",component:ABOUTComponent},
